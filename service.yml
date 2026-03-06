@@ -1,13 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: bms-service
+  name: bookmyshow-service
+  namespace: venkatesh-ns
   labels:
     app: bms
 spec:
   type: LoadBalancer
   ports:
-  - port: 80
-    targetPort: 3000  # Replace with the port your app runs on
+  - port: 3000
+    targetPort: 3000 
   selector:
     app: bms
+
